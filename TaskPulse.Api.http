@@ -1,0 +1,29 @@
+@TaskPulse.Api_HostAddress = https://localhost:7237
+
+
+### Register
+POST {{TaskPulse.Api_HostAddress}}/api/Auth/register
+Content-Type: application/json
+
+{
+  "fullName": "Abdullah",
+  "email": "abdullah@example.com",
+  "password": "Password@123"
+}
+
+### Login
+POST {{TaskPulse.Api_HostAddress}}/api/Auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@taskpulse.local",
+  "password": "Admin@12345"
+}
+
+### Me
+GET {{TaskPulse.Api_HostAddress}}/api/Auth/me
+Authorization: Bearer PASTE_TOKEN_HERE
+
+### Projects
+GET {{TaskPulse.Api_HostAddress}}/api/Projects
+Authorization: Bearer PASTE_TOKEN_HERE
